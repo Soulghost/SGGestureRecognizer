@@ -48,3 +48,11 @@ You can preview and delete gestures in library by present an `SGGesturePreviewCo
 }
 ```
 The `SGGesturePreviewController` will load gestures from the `SGGestureManager`, you can delete a gesture by slide left a gesture cell.
+
+### Modify the library path
+You can customize the gesture library save and load path by change the property in `SGGestureManager`.
+The coed below change the load path to main bundle, when you change the load path, the manager will reload gestures from the new path.
+```objective-c
+[SGDollarOneManager sharedManager].libLoadPath = [[NSBundle mainBundle] pathForResource:@"gestureLib.gs" ofType:nil];
+```
+The save path is the Caches Directory by default.
