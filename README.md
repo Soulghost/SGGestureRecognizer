@@ -37,3 +37,14 @@ SGGestureSet *set = [SGGestureSet gestureSetWithPoints:self.samplePoints];
 NSString *gesName = [mgr recognizeGestureSet:set];
 ```
 if the gesName is not nil, that means the gesture is recognize succeeded.
+
+### Preview and delete gestures in library
+You can preview and delete gestures in library by present an `SGGesturePreviewController` embedded in an `UINavigationController`.
+```objective-c
+- (void)preview {
+    SGGesturePreviewController *vc = [[SGGesturePreviewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+```
+The `SGGesturePreviewController` will load gestures from the `SGGestureManager`, you can delete a gesture by slide left a gesture cell.
