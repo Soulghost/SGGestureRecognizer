@@ -170,7 +170,7 @@
     SGGesturePoint *firstPoint = [resampleSet pointAtIndex:0];
     CGFloat iAngle = atan2(firstPoint.y, firstPoint.x);
     CGFloat rotationInvariance = M_PI_4;
-    CGFloat r= rotationInvariance;
+    CGFloat r = rotationInvariance;
     CGFloat baseOrientation = r * floor((iAngle + r/2) / r);
     CGFloat rotateBy = baseOrientation - iAngle;
     CGFloat cosValue = cos(rotateBy);

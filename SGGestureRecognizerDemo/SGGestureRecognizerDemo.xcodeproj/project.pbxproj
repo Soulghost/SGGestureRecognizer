@@ -11,7 +11,6 @@
 		6857F2521D28C416000D3ECC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2511D28C416000D3ECC /* AppDelegate.m */; };
 		6857F2551D28C416000D3ECC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2541D28C416000D3ECC /* ViewController.m */; };
 		6857F25A1D28C416000D3ECC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6857F2591D28C416000D3ECC /* Assets.xcassets */; };
-		6857F25D1D28C416000D3ECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6857F25B1D28C416000D3ECC /* LaunchScreen.storyboard */; };
 		6857F2681D28C416000D3ECC /* SGGestureRecognizerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2671D28C416000D3ECC /* SGGestureRecognizerDemoTests.m */; };
 		6857F2731D28C416000D3ECC /* SGGestureRecognizerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2721D28C416000D3ECC /* SGGestureRecognizerDemoUITests.m */; };
 		6857F2891D28C46E000D3ECC /* SGGestureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2821D28C46E000D3ECC /* SGGestureManager.m */; };
@@ -22,6 +21,7 @@
 		6857F2951D28D4C8000D3ECC /* SGGestureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2921D28D4C8000D3ECC /* SGGestureCell.m */; };
 		6857F2961D28D4C8000D3ECC /* SGGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2941D28D4C8000D3ECC /* SGGestureView.m */; };
 		6857F2981D28D6C4000D3ECC /* gestureLib.gs in Resources */ = {isa = PBXBuildFile; fileRef = 6857F2971D28D6C4000D3ECC /* gestureLib.gs */; };
+		686C73E71D295DC1004248EB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C73E61D295DC1004248EB /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		6857F2531D28C416000D3ECC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6857F2541D28C416000D3ECC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6857F2591D28C416000D3ECC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6857F25C1D28C416000D3ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6857F25E1D28C416000D3ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6857F2631D28C416000D3ECC /* SGGestureRecognizerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGGestureRecognizerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6857F2671D28C416000D3ECC /* SGGestureRecognizerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGGestureRecognizerDemoTests.m; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		6857F2941D28D4C8000D3ECC /* SGGestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGestureView.m; sourceTree = "<group>"; };
 		6857F2971D28D6C4000D3ECC /* gestureLib.gs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gestureLib.gs; sourceTree = "<group>"; };
 		6857F2991D28E464000D3ECC /* SGGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGGestureRecognizer.h; sourceTree = "<group>"; };
+		686C73E61D295DC1004248EB /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,6 @@
 				6857F2531D28C416000D3ECC /* ViewController.h */,
 				6857F2541D28C416000D3ECC /* ViewController.m */,
 				6857F2591D28C416000D3ECC /* Assets.xcassets */,
-				6857F25B1D28C416000D3ECC /* LaunchScreen.storyboard */,
 				6857F25E1D28C416000D3ECC /* Info.plist */,
 				6857F24D1D28C416000D3ECC /* Supporting Files */,
 			);
@@ -141,6 +140,7 @@
 			children = (
 				6857F2971D28D6C4000D3ECC /* gestureLib.gs */,
 				6857F24E1D28C416000D3ECC /* main.m */,
+				686C73E61D295DC1004248EB /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -306,7 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6857F25D1D28C416000D3ECC /* LaunchScreen.storyboard in Resources */,
+				686C73E71D295DC1004248EB /* Launch Screen.storyboard in Resources */,
 				6857F2981D28D6C4000D3ECC /* gestureLib.gs in Resources */,
 				6857F25A1D28C416000D3ECC /* Assets.xcassets in Resources */,
 			);
@@ -376,17 +376,6 @@
 			targetProxy = 6857F26F1D28C416000D3ECC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6857F25B1D28C416000D3ECC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6857F25C1D28C416000D3ECC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6857F2751D28C416000D3ECC /* Debug */ = {
