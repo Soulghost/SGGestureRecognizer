@@ -28,6 +28,7 @@ if (set.countPoints) {
     [mgr addGestureSet:set];
 }
 ```
+When you add a gesture set, the manager will standardize the set and generate vector for this set, then save it to the save path on disk.
 
 ### Recognize a gesture
 You also should sample some points on the gesture path and pass to `SGGestureSet`, the recognizer will standardize the set and generate vector to compare with the vectors in gesture library.
@@ -56,3 +57,10 @@ The coed below change the load path to main bundle, when you change the load pat
 [SGDollarOneManager sharedManager].libLoadPath = [[NSBundle mainBundle] pathForResource:@"gestureLib.gs" ofType:nil];
 ```
 The save path is the Caches Directory by default.
+
+### Custom params about recognize
+There are three params in the manager property, they are `samplePointCount`, `threshold` and `gestureSize`.
+#### SamplePointCount
+When the manager resample the set, there will be some uniform distributed points on the gesture curve, the number of the points is defined in `samplePointCount`.
+#### Threshold
+When the manager recognize a gesture, it use `Cosine Similarity` to compare the vector of the gesture to be recognized and the vectors in the gesture library, if there cosine similarity is less than the threshold, it will be considered, when all vectors are enumerated, the manager will choose the best result to return.
