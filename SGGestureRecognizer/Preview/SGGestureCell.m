@@ -20,7 +20,7 @@
 @implementation SGGestureCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView set:(SGGestureSet *)set {
-    static NSString *ID = @"magicCell";
+    static NSString *ID = @"gestureCell";
     SGGestureCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil) {
         cell = [[SGGestureCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
@@ -51,7 +51,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.gesView.center = CGPointMake(self.gesView.frame.size.width * 0.5f + 10, MagicCellHeight * 0.5f);
+    self.gesView.center = CGPointMake(self.gesView.frame.size.width * 0.5f + 10, GestureCellHeight * 0.5f);
     CGSize nameLabelSize = [self.nameLabel.text sizeWithAttributes:@{NSFontAttributeName:self.nameLabel.font}];
     CGFloat nameLabelX = CGRectGetMaxX(self.gesView.frame) + 20;
     CGFloat nameLabelY = CGRectGetMidY(self.gesView.frame) - nameLabelSize.height * 0.5f;

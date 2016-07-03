@@ -7,9 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "SGDollarOneManager.h"
-#import "SGGestureSet.h"
-#import "SGGesturePreviewController.h"
+#import "SGGestureRecognizer.h"
 
 typedef NS_ENUM(NSInteger,SampleMode){
     SampleModeRecord = 0,
@@ -36,7 +34,7 @@ typedef NS_ENUM(NSInteger,SampleMode){
 
 - (void)comminInit {
     // set gesture load path
-    [SGDollarOneManager sharedManager].libLoadPath = [[NSBundle mainBundle] pathForResource:@"gestureLib.gs" ofType:nil];
+    [SGGestureManager sharedManager].libLoadPath = [[NSBundle mainBundle] pathForResource:@"gestureLib.gs" ofType:nil];
     // add gesture
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self.view addGestureRecognizer:pan];
@@ -162,7 +160,7 @@ typedef NS_ENUM(NSInteger,SampleMode){
 #pragma mark -
 #pragma mark Sample & Recognize
 - (void)sample {
-    SGDollarOneManager *mgr = [SGDollarOneManager sharedManager];
+    SGGestureManager *mgr = [SGGestureManager sharedManager];
     SGGestureSet *set = [SGGestureSet gestureSetWithName:self.nameField.text points:self.samplePoints];
     if (set.countPoints) {
         [mgr addGestureSet:set];
@@ -170,7 +168,7 @@ typedef NS_ENUM(NSInteger,SampleMode){
 }
 
 - (void)recognize {
-    SGDollarOneManager *mgr = [SGDollarOneManager sharedManager];
+    SGGestureManager *mgr = [SGGestureManager sharedManager];
     SGGestureSet *set = [SGGestureSet gestureSetWithPoints:self.samplePoints];
     NSString *gesName = [mgr recognizeGestureSet:set];
     if (gesName.length) {

@@ -1,27 +1,27 @@
 //
-//  SGDollarOneManager.m
+//  SGGestureManager.m
 //  SGGestureRecognizer
 //
 //  Created by soulghost on 9/1/2016.
 //  Copyright © 2016 soulghost. All rights reserved.
 //
 
-#import "SGDollarOneManager.h"
+#import "SGGestureManager.h"
 #import "SGGestureSet.h"
 #import "SGGesturePoint.h"
 #import "SGGestureVector.h"
 
-@interface SGDollarOneManager ()
+@interface SGGestureManager ()
 
 @end
 
-@implementation SGDollarOneManager
+@implementation SGGestureManager
 
 + (instancetype)sharedManager {
-    static SGDollarOneManager *instance = nil;
+    static SGGestureManager *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [SGDollarOneManager new];
+        instance = [SGGestureManager new];
     });
     return instance;
 }
@@ -29,7 +29,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         self.samplePointCount = 200;
-        self.threshold = 0.25;
+        self.threshold = 0.4;
         self.gestureSize = CGSizeMake(150, 150);
         NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
         self.libLoadPath = [rootPath stringByAppendingPathComponent:@"gestureLib.gs"];
@@ -86,7 +86,7 @@
 }
 
 - (void)standardizeSet:(SGGestureSet *__autoreleasing *)set {
-    // 计算曲线的总长度，用于均匀分布采样点
+    // to resample the curve, calculate the length of the curve
     SGGestureSet *tempSet = *set;
     double sumLength = 0;
     for (int i = 1; i < tempSet.countPoints; i++) {
@@ -94,7 +94,7 @@
         SGGesturePoint *pt2 = [tempSet pointAtIndex:i - 1];
         sumLength += [pt1 distanceTo:pt2];
     }
-    // 重新采样
+    // resample with sample uniform distributed points
     SGGestureSet *resampleSet = [SGGestureSet gestureSetWithName:tempSet.name];
     double Interval = sumLength / self.samplePointCount;
     double D = 0;
@@ -117,7 +117,7 @@
             i++;
         }
     }
-    // 求坐标平均值作为中点
+    // calculate the middle point of the sample points
     double sumx = 0;
     double sumy = 0;
     for (int i = 0; i < resampleSet.countPoints; i++) {
@@ -129,14 +129,14 @@
     CGFloat centerY = sumy / resampleSet.countPoints;
     self.sampleMiddle = CGPointMake(centerX, centerY);
     SGGesturePoint *center = [SGGesturePoint gesturePointWithCGPoint:CGPointMake(centerX,centerY)];
-    // 根据中点把整个图形移动到坐标原点
+    // move the curve to origin based on the middle point
     for (int i = 0; i < resampleSet.countPoints; i++) {
         SGGesturePoint *pt = [resampleSet pointAtIndex:i];
         pt.x -= center.x;
         pt.y -= center.y;
         [resampleSet setPoint:pt atIndex:i];
     }
-    // 缩放到标准尺寸
+    // scale the curve to standard size
     CGFloat minX = CGFLOAT_MAX;
     CGFloat maxX = -CGFLOAT_MAX;
     CGFloat minY = CGFLOAT_MAX;
@@ -151,7 +151,6 @@
     CGSize desSize = self.gestureSize;
     CGFloat sideX = maxX - minX;
     CGFloat sideY = maxY - minY;
-#pragma mark 有可能产生除以0的错误
     CGFloat longSide = MAX(sideX, sideY);
     CGFloat shortSide = MIN(sideX, sideY);
     bool uniformly = shortSide / longSide < 0.2;
@@ -167,7 +166,7 @@
         pt.y *= scaleY;
         [resampleSet setPoint:pt atIndex:i];
     }
-    // 旋转到标准位置
+    // rotate the curve to standard angle.
     SGGesturePoint *firstPoint = [resampleSet pointAtIndex:0];
     CGFloat iAngle = atan2(firstPoint.y, firstPoint.x);
     CGFloat rotationInvariance = M_PI_4;
@@ -182,7 +181,7 @@
         pt.y = pt.x * sinValue + pt.y * cosValue;
         [resampleSet setPoint:pt atIndex:i];
     }
-    // 生成向量
+    // generate the vector 
     SGGestureVector *vec = [SGGestureVector vector];
     double sum = 0;
     for (int i = 0; i < resampleSet.countPoints; i++) {

@@ -1,5 +1,5 @@
 //
-//  SGDollarOneManager.h
+//  SGGestureManager.h
 //  SGGestureRecognizer
 //
 //  Created by soulghost on 9/1/2016.
@@ -11,7 +11,7 @@
 
 @class SGGestureSet;
 
-@interface SGDollarOneManager : NSObject
+@interface SGGestureManager : NSObject
 
 @property (nonatomic, copy) NSString *libLoadPath;
 @property (nonatomic, copy) NSString *libSavePath;

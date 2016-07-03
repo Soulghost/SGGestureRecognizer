@@ -9,7 +9,7 @@
 #import "SGGesturePreviewController.h"
 #import "SGGesturePoint.h"
 #import "SGGestureSet.h"
-#import "SGDollarOneManager.h"
+#import "SGGestureManager.h"
 #import "SGGestureCell.h"
 
 @interface SGGesturePreviewController () <UITableViewDataSource,UITableViewDelegate>
@@ -34,7 +34,7 @@
 
 - (NSMutableArray<SGGestureSet *> *)gestureSets {
     if (_gestureSets == nil) {
-        _gestureSets = [NSMutableArray arrayWithArray:[SGDollarOneManager sharedManager].gestureSets];
+        _gestureSets = [NSMutableArray arrayWithArray:[SGGestureManager sharedManager].gestureSets];
     }
     return _gestureSets;
 }
@@ -45,7 +45,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return MagicCellHeight;
+    return GestureCellHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -59,8 +59,8 @@
         case UITableViewCellEditingStyleDelete:{
             [self.gestureSets removeObjectAtIndex:indexPath.row];
             [self.tableView reloadData];
-            [[SGDollarOneManager sharedManager].gestureSets removeObjectAtIndex:indexPath.row];
-            [[SGDollarOneManager sharedManager] saveGestures];
+            [[SGGestureManager sharedManager].gestureSets removeObjectAtIndex:indexPath.row];
+            [[SGGestureManager sharedManager] saveGestures];
             break;
         }
         default:

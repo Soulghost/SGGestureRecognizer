@@ -10,7 +10,7 @@
 
 @class SGGestureSet;
 
-#define MagicCellHeight 230
+#define GestureCellHeight 230
 
 @interface SGGestureCell : UITableViewCell
 

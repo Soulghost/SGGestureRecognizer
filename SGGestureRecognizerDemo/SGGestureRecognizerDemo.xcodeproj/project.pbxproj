@@ -14,7 +14,7 @@
 		6857F25D1D28C416000D3ECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6857F25B1D28C416000D3ECC /* LaunchScreen.storyboard */; };
 		6857F2681D28C416000D3ECC /* SGGestureRecognizerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2671D28C416000D3ECC /* SGGestureRecognizerDemoTests.m */; };
 		6857F2731D28C416000D3ECC /* SGGestureRecognizerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2721D28C416000D3ECC /* SGGestureRecognizerDemoUITests.m */; };
-		6857F2891D28C46E000D3ECC /* SGDollarOneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2821D28C46E000D3ECC /* SGDollarOneManager.m */; };
+		6857F2891D28C46E000D3ECC /* SGGestureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2821D28C46E000D3ECC /* SGGestureManager.m */; };
 		6857F28A1D28C46E000D3ECC /* SGGesturePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2841D28C46E000D3ECC /* SGGesturePoint.m */; };
 		6857F28B1D28C46E000D3ECC /* SGGestureSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2861D28C46E000D3ECC /* SGGestureSet.m */; };
 		6857F28C1D28C46E000D3ECC /* SGGestureVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2881D28C46E000D3ECC /* SGGestureVector.m */; };
@@ -57,8 +57,8 @@
 		6857F26E1D28C416000D3ECC /* SGGestureRecognizerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGGestureRecognizerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6857F2721D28C416000D3ECC /* SGGestureRecognizerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGGestureRecognizerDemoUITests.m; sourceTree = "<group>"; };
 		6857F2741D28C416000D3ECC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6857F2811D28C46E000D3ECC /* SGDollarOneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDollarOneManager.h; sourceTree = "<group>"; };
-		6857F2821D28C46E000D3ECC /* SGDollarOneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDollarOneManager.m; sourceTree = "<group>"; };
+		6857F2811D28C46E000D3ECC /* SGGestureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGestureManager.h; sourceTree = "<group>"; };
+		6857F2821D28C46E000D3ECC /* SGGestureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGestureManager.m; sourceTree = "<group>"; };
 		6857F2831D28C46E000D3ECC /* SGGesturePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGesturePoint.h; sourceTree = "<group>"; };
 		6857F2841D28C46E000D3ECC /* SGGesturePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGesturePoint.m; sourceTree = "<group>"; };
 		6857F2851D28C46E000D3ECC /* SGGestureSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGestureSet.h; sourceTree = "<group>"; };
@@ -72,6 +72,7 @@
 		6857F2931D28D4C8000D3ECC /* SGGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGestureView.h; sourceTree = "<group>"; };
 		6857F2941D28D4C8000D3ECC /* SGGestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGestureView.m; sourceTree = "<group>"; };
 		6857F2971D28D6C4000D3ECC /* gestureLib.gs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gestureLib.gs; sourceTree = "<group>"; };
+		6857F2991D28E464000D3ECC /* SGGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGGestureRecognizer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				6857F28D1D28D48A000D3ECC /* Preview */,
-				6857F2811D28C46E000D3ECC /* SGDollarOneManager.h */,
-				6857F2821D28C46E000D3ECC /* SGDollarOneManager.m */,
+				6857F2991D28E464000D3ECC /* SGGestureRecognizer.h */,
+				6857F2811D28C46E000D3ECC /* SGGestureManager.h */,
+				6857F2821D28C46E000D3ECC /* SGGestureManager.m */,
 				6857F2831D28C46E000D3ECC /* SGGesturePoint.h */,
 				6857F2841D28C46E000D3ECC /* SGGesturePoint.m */,
 				6857F2851D28C46E000D3ECC /* SGGestureSet.h */,
@@ -336,7 +338,7 @@
 				6857F2961D28D4C8000D3ECC /* SGGestureView.m in Sources */,
 				6857F28C1D28C46E000D3ECC /* SGGestureVector.m in Sources */,
 				6857F2901D28D4A0000D3ECC /* SGGesturePreviewController.m in Sources */,
-				6857F2891D28C46E000D3ECC /* SGDollarOneManager.m in Sources */,
+				6857F2891D28C46E000D3ECC /* SGGestureManager.m in Sources */,
 				6857F2551D28C416000D3ECC /* ViewController.m in Sources */,
 				6857F2521D28C416000D3ECC /* AppDelegate.m in Sources */,
 				6857F28B1D28C46E000D3ECC /* SGGestureSet.m in Sources */,
@@ -560,6 +562,7 @@
 				6857F2791D28C416000D3ECC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6857F27A1D28C416000D3ECC /* Build configuration list for PBXNativeTarget "SGGestureRecognizerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +571,7 @@
 				6857F27C1D28C416000D3ECC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6857F27D1D28C416000D3ECC /* Build configuration list for PBXNativeTarget "SGGestureRecognizerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +580,7 @@
 				6857F27F1D28C416000D3ECC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

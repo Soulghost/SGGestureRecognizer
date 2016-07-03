@@ -7,7 +7,7 @@
 //
 
 #import "SGGestureView.h"
-#import "SGDollarOneManager.h"
+#import "SGGestureManager.h"
 #import "SGGestureSet.h"
 #import "SGGesturePoint.h"
 
