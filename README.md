@@ -36,3 +36,4 @@ SGDollarOneManager *mgr = [SGDollarOneManager sharedManager];
 SGGestureSet *set = [SGGestureSet gestureSetWithPoints:self.samplePoints];
 NSString *gesName = [mgr recognizeGestureSet:set];
 ```
+if the gesName is not nil, that means the gesture is recognize succeeded.
