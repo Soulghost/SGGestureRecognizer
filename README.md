@@ -62,5 +62,9 @@ The save path is the Caches Directory by default.
 There are three params in the manager property, they are `samplePointCount`, `threshold` and `gestureSize`.
 #### SamplePointCount
 When the manager resample the set, there will be some uniform distributed points on the gesture curve, the number of the points is defined in `samplePointCount`.
+
 #### Threshold
 When the manager recognize a gesture, it use `Cosine Similarity` to compare the vector of the gesture to be recognized and the vectors in the gesture library, if there cosine similarity is less than the threshold, it will be considered, when all vectors are enumerated, the manager will choose the best result to return.
+
+#### GestureSize
+When the manager standardize the set, the gesture curve will be scale to standard size, the standard size is the gestureSize defined in the manager.
