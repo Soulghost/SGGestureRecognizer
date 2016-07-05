@@ -6,7 +6,7 @@ SGGestureRecognizer is a graphics gesture recognizer based on Dollar One Alghrit
 
 ## A GIF about the Recognizer
 <p>
-<img src="https://raw.githubusercontent.com/Soulghost/SGGestureRecognizer/master/images/recognize.gif" width = "300" height = "533" alt="WiFi Page" align=center />
+<img src="https://raw.githubusercontent.com/Soulghost/SGGestureRecognizer/master/images/recognize.gif" width = "300" height = "533" alt="GIF" align=center />
 </p>
 
 ## How To Get Started
