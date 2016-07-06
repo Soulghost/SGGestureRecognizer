@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6833C7151D2D559600BD56FF /* gestureLib.gs in Resources */ = {isa = PBXBuildFile; fileRef = 6833C7141D2D559600BD56FF /* gestureLib.gs */; };
 		6857F24F1D28C416000D3ECC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F24E1D28C416000D3ECC /* main.m */; };
 		6857F2521D28C416000D3ECC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2511D28C416000D3ECC /* AppDelegate.m */; };
 		6857F2551D28C416000D3ECC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2541D28C416000D3ECC /* ViewController.m */; };
@@ -20,8 +21,6 @@
 		6857F2901D28D4A0000D3ECC /* SGGesturePreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F28F1D28D4A0000D3ECC /* SGGesturePreviewController.m */; };
 		6857F2951D28D4C8000D3ECC /* SGGestureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2921D28D4C8000D3ECC /* SGGestureCell.m */; };
 		6857F2961D28D4C8000D3ECC /* SGGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F2941D28D4C8000D3ECC /* SGGestureView.m */; };
-		6857F2981D28D6C4000D3ECC /* gestureLib.gs in Resources */ = {isa = PBXBuildFile; fileRef = 6857F2971D28D6C4000D3ECC /* gestureLib.gs */; };
-		686C73E71D295DC1004248EB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C73E61D295DC1004248EB /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6833C7141D2D559600BD56FF /* gestureLib.gs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gestureLib.gs; sourceTree = "<group>"; };
 		6857F24A1D28C416000D3ECC /* SGGestureRecognizerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGGestureRecognizerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6857F24E1D28C416000D3ECC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6857F2501D28C416000D3ECC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,9 +70,7 @@
 		6857F2921D28D4C8000D3ECC /* SGGestureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGestureCell.m; sourceTree = "<group>"; };
 		6857F2931D28D4C8000D3ECC /* SGGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGestureView.h; sourceTree = "<group>"; };
 		6857F2941D28D4C8000D3ECC /* SGGestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGestureView.m; sourceTree = "<group>"; };
-		6857F2971D28D6C4000D3ECC /* gestureLib.gs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = gestureLib.gs; sourceTree = "<group>"; };
 		6857F2991D28E464000D3ECC /* SGGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGGestureRecognizer.h; sourceTree = "<group>"; };
-		686C73E61D295DC1004248EB /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,9 +136,8 @@
 		6857F24D1D28C416000D3ECC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6857F2971D28D6C4000D3ECC /* gestureLib.gs */,
+				6833C7141D2D559600BD56FF /* gestureLib.gs */,
 				6857F24E1D28C416000D3ECC /* main.m */,
-				686C73E61D295DC1004248EB /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -306,9 +303,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				686C73E71D295DC1004248EB /* Launch Screen.storyboard in Resources */,
-				6857F2981D28D6C4000D3ECC /* gestureLib.gs in Resources */,
 				6857F25A1D28C416000D3ECC /* Assets.xcassets in Resources */,
+				6833C7151D2D559600BD56FF /* gestureLib.gs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
